@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Work+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#00265a",
+                        "tertiary": "#590002",
+                        "tertiary-container": "#820004",
+                        "primary-container": "#003b84",
+                        "secondary-fixed-dim": "#82cfff",
+                        "on-surface": "#1c1b1b",
+                        "on-secondary-fixed-variant": "#004c6b",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#ffdad5",
+                        "on-primary-fixed": "#001a42",
+                        "on-background": "#1c1b1b",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c3c6d3",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f3f0ef",
+                        "surface-tint": "#335da7",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#ff8576",
+                        "outline": "#737782",
+                        "primary-fixed-dim": "#aec6ff",
+                        "on-tertiary-fixed-variant": "#930006",
+                        "secondary": "#00658d",
+                        "on-primary-container": "#82a8f8",
+                        "surface-dim": "#dcd9d9",
+                        "on-primary-fixed-variant": "#13448d",
+                        "on-surface-variant": "#434751",
+                        "tertiary-fixed-dim": "#ffb4aa",
+                        "background": "#fcf9f8",
+                        "on-tertiary-fixed": "#410001",
+                        "surface": "#fcf9f8",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-container-low": "#f6f3f2",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#eae7e7",
+                        "on-secondary-container": "#004866",
+                        "inverse-primary": "#aec6ff",
+                        "surface-bright": "#fcf9f8",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#2dbcfe",
+                        "surface-container": "#f0eded",
+                        "secondary-fixed": "#c6e7ff",
+                        "primary-fixed": "#d8e2ff",
+                        "on-secondary-fixed": "#001e2d",
+                        "surface-variant": "#e5e2e1",
+                        "inverse-surface": "#313030"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin": "32px",
+                        "section-gap": "100px",
+                        "element-gap": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Work Sans"],
+                        "headline-xl": ["Work Sans"],
+                        "label-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Work Sans"],
+                        "button": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-xl": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+                        "label-lg": ["14px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "button": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.7", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-layering {
+            background: linear-gradient(180deg, #ffffff 0%, #f6f3f2 100%);
+        }
+        .premium-shadow {
+            box-shadow: 0 20px 40px -15px rgba(0, 38, 90, 0.08);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .hero-gradient {
+            background: linear-gradient(90deg, rgba(0, 38, 90, 0.95) 0%, rgba(0, 38, 90, 0.7) 50%, rgba(0, 38, 90, 0.3) 100%);
+        }
+        .nav-underline {
+            position: relative;
+        }
+        .nav-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #00265a;
+            transition: width 0.3s ease;
+        }
+        .nav-underline:hover::after {
+            width: 100%;
+        }
+        .active-nav-underline::after {
+            width: 100%;
+        }
+        ::selection {
+            background-color: #00265a;
+            color: #ffffff;
+        }
+    </style>
+<style id="kspl-responsive-fixes">
+@media (max-width: 767px){
+  .kspl-menu-toggle{display:inline-flex!important;align-items:center;justify-content:center;}
+  body{overflow-x:hidden;}
+  img{max-width:100%;height:auto;}
+  iframe{max-width:100%;}
+  h1{word-break:normal;}
+  .px-8{padding-left:1rem!important;padding-right:1rem!important;}
+  .h-24{height:5rem!important;}
+  .h-20{height:4.5rem!important;}
+}
+</style></head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar -->
+<header class="bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm top-0 sticky z-50">
+<nav class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<a href="index.html">
+<div class="flex flex-col leading-tight">
+  <span class="text-lg md:text-xl font-bold tracking-wide text-[#0B1F3A]">KEIRESTU SMART PRO</span>
+  <span class="text-[10px] md:text-xs uppercase tracking-[0.25em] text-[#1E88C8] font-semibold">Private Limited</span>
+</div>
+</a>
+</div>
+<div class="hidden md:flex items-center gap-8 lg:gap-10">
+<a class="text-primary font-bold nav-underline active-nav-underline pb-1 text-sm tracking-wide" href="index.html">Home</a>
+<a class="text-slate-500 hover:text-primary transition-colors font-medium nav-underline pb-1 text-sm tracking-wide" href="about.html">About Us</a>
+<a class="text-slate-500 hover:text-primary transition-colors font-medium nav-underline pb-1 text-sm tracking-wide" href="verticals.html">Verticals</a>
+<div class="relative group">
+<button class="flex items-center gap-1 text-slate-500 group-hover:text-primary transition-colors font-medium nav-underline pb-1 text-sm tracking-wide">
+                        Products <span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<div class="absolute left-0 top-full mt-2 w-56 bg-white border border-slate-100 shadow-2xl rounded-lg py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-50">
+<a class="block px-5 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary" href="partners.html#dell" id="dell">Dell</a>
+<a class="block px-5 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary" href="partners.html#hikvision" id="hikvision">Hikvision</a>
+<a class="block px-5 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary" href="partners.html#digisol" id="digisol">Digisol</a>
+<a class="block px-5 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary" href="partners.html#sony" id="sony">Sony</a>
+<a class="block px-5 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary" href="partners.html#sophos" id="sophos">Sophos</a>
+<a class="block px-5 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary" href="partners.html#seagate" id="seagate">Seagate</a>
+<a class="block px-5 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary" href="partners.html#hp" id="hp">HP</a>
+<a class="block px-5 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary" href="partners.html#prama" id="prama">Prama</a>
+</div>
+</div>
+<a class="text-slate-500 hover:text-primary transition-colors font-medium nav-underline pb-1 text-sm tracking-wide" href="partners.html">Partners</a>
+<a class="text-slate-500 hover:text-primary transition-colors font-medium nav-underline pb-1 text-sm tracking-wide" href="contact.html">Contact</a>
+</div>
+<a href="contact.html" class="bg-primary text-white px-7 py-3 rounded-full font-button text-xs uppercase tracking-widest hover:bg-primary-container transition-all active:scale-95 flex items-center gap-2 shadow-lg hover:shadow-primary/20">
+                Submit Inquiry <span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</nav>
+<button aria-label="Open menu" class="kspl-menu-toggle md:hidden material-symbols-outlined text-slate-700 p-2 rounded-lg border border-slate-200 bg-white">menu</button><div class="kspl-mobile-menu hidden md:hidden border-t border-slate-200 bg-white px-6 py-4 space-y-3 shadow-lg">
+<a class="block text-sm font-medium text-slate-700" href="index.html">Home</a>
+<a class="block text-sm font-medium text-slate-700" href="about.html">About Us</a>
+<a class="block text-sm font-medium text-slate-700" href="verticals.html">Verticals</a>
+<a class="block text-sm font-medium text-slate-700" href="partners.html">Partners</a>
+<a class="block text-sm font-medium text-slate-700" href="it-distribution.html">IT Distribution</a>
+<a class="block text-sm font-medium text-slate-700" href="contact.html">Contact</a>
+</div></header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 hero-gradient z-10"></div>
+<img class="w-full h-full object-cover scale-105" data-alt="A high-tech digital landscape featuring glowing blue fiber optic cables and circuit board traces illuminating a dark, sophisticated server room environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMM6Q77LjFjYe6oQ-cORWArpJNKh8YDy4njPXubVFXj0vrTDVDa5njVwtazq-s2Y8dcKWuoBBX7o3q8__efKdI_07A5W_A0zItj2Oq0b7FFgnFm80HpcGTyMqAKobpicUB_EimYZv3FbWdZl3lfB9XCDNx4FQ19rsH2v7f8-4j7vbsv4lUCSLeXSlOGIWtb4EcQjG39dGfJPxWquDokBEfUJJQUmvQ3RjMxdkLY_yYkdbUcnCxHxBY0ON6u8VAS3DSq8jkImpZ3kU"/>
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(51,93,167,0.15),transparent_50%)]"></div>
+</div>
+<div class="relative z-20 max-w-7xl mx-auto px-8 w-full">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-3 mb-6 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20">
+<span class="w-2 h-2 bg-secondary-container rounded-full animate-pulse"></span>
+<span class="text-white font-label-lg tracking-[0.2em] uppercase text-[10px]">Empowering Digital India</span>
+</div>
+<h1 class="text-white font-headline-xl text-headline-xl mb-8 leading-[1.05]">
+                        Bridging the Gap through <br/><span class="text-secondary-fixed-dim">Innovative IT Solutions</span>
+</h1>
+<p class="text-slate-200/90 font-body-lg text-body-lg mb-12 leading-relaxed max-w-2xl font-light">
+                        KSPL is a premier IT and Telecom distributor, delivering world-class technology infrastructure and consumer electronics through a robust national network.
+                    </p>
+<div class="flex flex-wrap gap-5">
+<a class="bg-secondary-container text-on-secondary-container px-10 py-4.5 rounded-full font-button text-button hover:brightness-110 transition-all flex items-center gap-3 shadow-xl shadow-secondary-container/20" href="index.html#products">
+                            Discover Our Solutions
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a download="KYC-form-KSPL.docx" class="bg-white/5 border border-white/20 text-white backdrop-blur-md px-10 py-4.5 rounded-full font-button text-button hover:bg-white/15 transition-all" href="partners.html">
+                            Partner With Us
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- About KSPL -->
+<section class="py-section-gap bg-white overflow-hidden relative">
+<div class="absolute top-0 right-0 w-1/3 h-full bg-slate-50/50 -z-10 skew-x-[-15deg] translate-x-1/2"></div>
+<div class="max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-20 items-center">
+<div class="relative group">
+<div class="absolute -top-10 -left-10 w-48 h-48 bg-primary-container/5 rounded-full -z-10 group-hover:scale-110 transition-transform duration-700"></div>
+<div class="relative">
+<img alt="Cybersecurity and Infrastructure" class="rounded-2xl shadow-[0_32px_64px_-16px_rgba(0,38,90,0.15)] relative z-10 w-full" data-alt="A close-up, high-definition photograph of sophisticated server hardware and glowing blue LED indicators." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZjL2zvXTxJlDUPsROmh-5D20mynRaYo2r-L33mAeZCct-CU1qpiwt0HgmyMm08nPA7_I51YXre1zD3TqexNu89CmdeLPgCrYY4tohYF28L-mM-8H9WYijzAETuEZ8Ddj-bV3WiJbkNzYJZiRl1_ExwQUPbG2qk0VLXjuOL3EMxP00p-X0msD6dnxUYmrsf7Ea56sopH9lSsw4s3QKo_gCambGMwgaBfWueXPqjlT2kLbONywZXtlK3rr6Oadujo8pWog6Qpr32l4"/>
+<div class="absolute -bottom-8 -right-8 bg-primary p-10 text-white rounded-2xl shadow-2xl z-20 hidden md:block group-hover:translate-y-[-10px] transition-transform duration-500">
+<div class="text-5xl font-black font-headline-md mb-2">7+</div>
+<div class="text-[10px] font-label-md uppercase tracking-[0.25em] text-secondary-fixed-dim">Years of Trust</div>
+</div>
+</div>
+</div>
+<div>
+<span class="text-secondary font-label-lg tracking-[0.2em] uppercase mb-4 block">Our Legacy</span>
+<h2 class="text-primary font-headline-lg text-headline-lg mb-8 leading-tight">Redefining Distribution in the Digital Era</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg mb-8 leading-relaxed font-light">
+                        KSPL (Keiretsu Smart Pro Pvt Ltd) stands at the forefront of IT and Telecom distribution in India. We operate as the critical link between global technology innovators and the diverse Indian market.
+                    </p>
+<p class="text-on-surface-variant font-body-md text-body-md mb-10 opacity-80">
+                        Our expansive reach spans across major metropolitan hubs and tier-2 cities, ensuring that the latest technology reaches every corner of the nation. We don't just move boxes; we provide the logistical and technical backbone that empowers businesses to scale.
+                    </p>
+<div class="grid sm:grid-cols-2 gap-8 mb-12">
+<div class="flex items-start gap-4">
+<div class="w-12 h-7 rounded-xl bg-slate-50 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary">verified_user</span>
+</div>
+<div>
+<h4 class="font-bold text-primary font-body-md mb-1">Reliability</h4>
+<p class="text-xs text-on-surface-variant/80 leading-relaxed">Trusted by thousands of retailers nationwide.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-7 rounded-xl bg-slate-50 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary">public</span>
+</div>
+<div>
+<h4 class="font-bold text-primary font-body-md mb-1">Pan-India Reach</h4>
+<p class="text-xs text-on-surface-variant/80 leading-relaxed">Seamless logistics from north to south.</p>
+</div>
+</div>
+</div>
+<a class="group inline-flex items-center gap-3 text-primary font-bold text-sm tracking-widest uppercase" href="about.html">
+                        Learn More About Our Journey 
+                        <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">trending_flat</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Our Verticals -->
+<section class="py-section-gap bg-slate-50/50" id="products">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-20">
+<span class="text-secondary font-label-lg tracking-[0.2em] uppercase mb-4 block">Core Expertise</span>
+<h2 class="text-primary font-headline-lg text-headline-lg mb-6">Our Business Verticals</h2>
+<div class="w-20 h-1 bg-secondary mx-auto rounded-full"></div>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Vertical Card -->
+<div class="bg-white p-10 rounded-2xl border border-slate-100 premium-shadow group hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+<div class="w-16 h-16 bg-slate-50 flex items-center justify-center rounded-2xl mb-8 group-hover:bg-primary transition-colors duration-500">
+<span class="material-symbols-outlined text-primary group-hover:text-white text-4xl">hub</span>
+</div>
+<h3 class="font-headline-md text-xl text-primary mb-4 group-hover:text-primary-container transition-colors">IT Distribution</h3>
+<p class="text-on-surface-variant font-body-sm text-sm leading-relaxed opacity-80">
+                            End-to-end distribution of hardware, peripherals, and networking components for the enterprise market.
+                        </p>
+</div>
+<!-- Vertical Card -->
+<div class="bg-white p-10 rounded-2xl border border-slate-100 premium-shadow group hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+<div class="w-16 h-16 bg-slate-50 flex items-center justify-center rounded-2xl mb-8 group-hover:bg-primary transition-colors duration-500">
+<span class="material-symbols-outlined text-primary group-hover:text-white text-4xl">add_chart</span>
+</div>
+<h3 class="font-headline-md text-xl text-primary mb-4 group-hover:text-primary-container transition-colors">Value Added Distribution</h3>
+<p class="text-on-surface-variant font-body-sm text-sm leading-relaxed opacity-80">
+                            Providing technical expertise, configuration services, and post-sales support for complex IT environments.
+                        </p>
+</div>
+<!-- Vertical Card -->
+<div class="bg-white p-10 rounded-2xl border border-slate-100 premium-shadow group hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+<div class="w-16 h-16 bg-slate-50 flex items-center justify-center rounded-2xl mb-8 group-hover:bg-primary transition-colors duration-500">
+<span class="material-symbols-outlined text-primary group-hover:text-white text-4xl">cloud_sync</span>
+</div>
+<h3 class="font-headline-md text-xl text-primary mb-4 group-hover:text-primary-container transition-colors">Infotech</h3>
+<p class="text-on-surface-variant font-body-sm text-sm leading-relaxed opacity-80">
+                            Focusing on software solutions, cloud services, and digital transformation assets for modern enterprises.
+                        </p>
+</div>
+<!-- Vertical Card -->
+<div class="bg-white p-10 rounded-2xl border border-slate-100 premium-shadow group hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+<div class="w-16 h-16 bg-slate-50 flex items-center justify-center rounded-2xl mb-8 group-hover:bg-primary transition-colors duration-500">
+<span class="material-symbols-outlined text-primary group-hover:text-white text-4xl">devices</span>
+</div>
+<h3 class="font-headline-md text-xl text-primary mb-4 group-hover:text-primary-container transition-colors">Consumer Brands</h3>
+<p class="text-on-surface-variant font-body-sm text-sm leading-relaxed opacity-80">
+                            Curating a portfolio of leading consumer technology brands for lifestyle segments.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Office Location -->
+<section class="py-section-gap bg-white relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="grid lg:grid-cols-12 gap-0 rounded-3xl shadow-[0_50px_100px_-20px_rgba(0,38,90,0.1)] border border-slate-100 overflow-hidden">
+<!-- Contact Form Container -->
+<div class="lg:col-span-6 p-10 md:p-16 bg-white">
+<div class="mb-12">
+<span class="text-secondary font-label-lg tracking-[0.2em] uppercase mb-3 block">Connect</span>
+<h2 class="text-primary font-headline-lg text-headline-lg">Get In Touch</h2>
+</div>
+<form class="space-y-8 js-inquiry-form">
+<div class="grid md:grid-cols-2 gap-8">
+<div class="space-y-3">
+<label class="block font-label-lg text-slate-400 uppercase text-[9px] tracking-widest">Full Name</label>
+<input class="w-full border-b border-slate-200 focus:border-primary focus:ring-0 px-0 py-2 outline-none transition-all placeholder:text-slate-300 bg-transparent" name="full_name" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-3">
+<label class="block font-label-lg text-slate-400 uppercase text-[9px] tracking-widest">Email Address</label>
+<input class="w-full border-b border-slate-200 focus:border-primary focus:ring-0 px-0 py-2 outline-none transition-all placeholder:text-slate-300 bg-transparent" name="email" placeholder="john@company.com" type="email"/>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="space-y-3">
+<label class="block font-label-lg text-slate-400 uppercase text-[9px] tracking-widest">Phone Number</label>
+<input class="w-full border-b border-slate-200 focus:border-primary focus:ring-0 px-0 py-2 outline-none transition-all placeholder:text-slate-300 bg-transparent" name="phone" placeholder="+91 00000 00000" type="tel"/>
+</div>
+<div class="space-y-3">
+<label class="block font-label-lg text-slate-400 uppercase text-[9px] tracking-widest">Location</label>
+<input class="w-full border-b border-slate-200 focus:border-primary focus:ring-0 px-0 py-2 outline-none transition-all placeholder:text-slate-300 bg-transparent" name="location" placeholder="Mumbai, India" type="text"/>
+</div>
+</div>
+<div class="space-y-3">
+<label class="block font-label-lg text-slate-400 uppercase text-[9px] tracking-widest">Your Message</label>
+<textarea class="w-full border-b border-slate-200 focus:border-primary focus:ring-0 px-0 py-2 outline-none transition-all placeholder:text-slate-300 resize-none bg-transparent" name="message" placeholder="How can we help you?" rows="3"></textarea>
+</div>
+<button class="w-full bg-primary text-white py-5 rounded-xl font-button text-xs uppercase tracking-[0.2em] hover:bg-primary-container transition-all shadow-xl hover:shadow-primary/30 flex items-center justify-center gap-3" type="submit">
+                                Submit Inquiry
+                                <span class="material-symbols-outlined text-sm">send</span>
+</button>
+</form>
+<div class="mt-16 pt-10 border-t border-slate-100 grid md:grid-cols-2 gap-8">
+<div class="flex items-start gap-5">
+<div class="w-10 h-6 rounded-full bg-slate-50 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary text-lg">location_on</span>
+</div>
+<div>
+<h4 class="font-bold font-body-md mb-2 text-primary text-sm">Corporate Office</h4>
+<address class="not-italic text-on-surface-variant text-[13px] leading-relaxed opacity-80">KEIRESTU SMART PRO PVT LTD.,<br/>139, Ground Floor, near Bishnu Mandir,<br/>Saheed Nagar, Bhubaneswar,<br/>Odisha 751007</address>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-5">
+<div class="w-10 h-6 rounded-full bg-slate-50 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary text-lg">call</span>
+</div>
+<span class="text-on-surface-variant text-[13px] font-medium">9437039625</span>
+</div>
+<div class="flex items-center gap-5">
+<div class="w-10 h-6 rounded-full bg-slate-50 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary text-lg">mail</span>
+</div>
+<span class="text-on-surface-variant text-[13px] font-medium">keirestusmartpropvtltd@gmail.com</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Map Section -->
+<div class="lg:col-span-6 relative min-h-[500px] lg:min-h-full">
+<div class="absolute inset-0 bg-slate-200 grayscale contrast-125">
+<iframe allowfullscreen="" class="w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.1384742512613!2d85.8459419!3d20.2944984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190a0f00000001%3A0x6b8763567840134e!2s139%2C%20Saheed%20Nagar%2C%20Bhubaneswar%2C%20Odisha%20751007!5e0!3m2!1sen!2sin!4v1715850000000!5m2!1sen!2sin"></iframe>
+</div>
+<!-- Map Overlay Badge -->
+<div class="absolute bottom-10 right-10 bg-primary text-white p-10 shadow-2xl max-w-[320px] rounded-2xl transform transition-transform hover:-translate-y-2">
+<div class="text-[10px] font-label-md uppercase tracking-[0.3em] text-secondary-fixed-dim mb-4">Our Presence</div>
+<p class="font-bold text-base mb-6 leading-relaxed">KEIRESTU SMART PRO PVT LTD., 139, Ground Floor, near Bishnu Mandir, Saheed Nagar, Bhubaneswar, Odisha 751007</p>
+<a class="inline-flex items-center gap-3 text-xs font-bold text-white group" href="https://www.google.com/maps/search/?api=1&amp;query=KEIRESTU+SMART+PRO+PVT+LTD.,139,+GROUND+FLOOR,+near+BISHNU+MANDIR,+Saheed+Nagar,+Bhubaneswar,+Odisha+751007" target="_blank">
+<span class="border-b border-white/30 pb-0.5 group-hover:border-white transition-all">GET DIRECTIONS</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-white full-width border-t border-primary-container">
+<div class="max-w-7xl mx-auto px-8 py-20">
+<div class="grid md:grid-cols-12 gap-12 mb-20">
+<div class="md:col-span-5">
+<a href="index.html">
+<div class="flex flex-col leading-tight mb-8">
+  <span class="text-lg md:text-xl font-bold tracking-wide text-white">KEIRESTU SMART PRO</span>
+  <span class="text-[10px] md:text-xs uppercase tracking-[0.25em] text-[#1E88C8] font-semibold">Private Limited</span>
+</div>
+</a>
+<div class="text-slate-400 font-body-sm max-w-sm space-y-4">
+<p class="text-sm font-medium text-slate-300">139, Saheed Nagar, Bhubaneswar, Odisha</p>
+<p class="leading-relaxed font-light">Empowering India's digital future through reliable IT &amp; Telecom distribution. Connecting innovators with the market since inception.</p>
+</div>
+</div>
+<div class="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-10">
+<div>
+<h5 class="text-xs font-bold uppercase tracking-[0.2em] mb-6 text-secondary-fixed-dim">Company</h5>
+<ul class="space-y-4 text-sm text-slate-400">
+<li><a class="hover:text-white transition-colors" href="about.html">About Us</a></li>
+<li><a class="hover:text-white transition-colors" href="about.html">Our Story</a></li>
+<li><a class="hover:text-white transition-colors" href="about.html">News &amp; Press</a></li>
+<li><a class="hover:text-white transition-colors" href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-xs font-bold uppercase tracking-[0.2em] mb-6 text-secondary-fixed-dim">Legal</h5>
+<ul class="space-y-4 text-sm text-slate-400">
+<li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-xs font-bold uppercase tracking-[0.2em] mb-6 text-secondary-fixed-dim">Support</h5>
+<ul class="space-y-4 text-sm text-slate-400">
+<li><a class="hover:text-white transition-colors" href="#">Partner Support</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Customer Care</a></li>
+<li><a class="hover:text-white transition-colors" href="#">FAQs</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-slate-500 text-xs tracking-widest font-medium uppercase">Copyright 2022 -ITINFOWAYS.COM All Rights Reserved</div>
+<div class="flex gap-8">
+<a class="text-slate-500 hover:text-white transition-colors" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.791-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+<a class="text-slate-500 hover:text-white transition-colors" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path></svg>
+</a>
+<a class="text-slate-500 hover:text-white transition-colors" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<script id="kspl-nav-script">
+document.addEventListener('click', function(e){
+  const btn = e.target.closest('.kspl-menu-toggle');
+  if(!btn) return;
+  const bar = btn.closest('nav, header');
+  const menu = bar ? bar.querySelector('.kspl-mobile-menu') : document.querySelector('.kspl-mobile-menu');
+  if(menu) menu.classList.toggle('hidden');
+});
+</script><script>
+(function() {
+  const inquiryEmail = 'keirestusmartpropvtltd@gmail.com';
+  document.querySelectorAll('.js-inquiry-form').forEach((form) => {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      const subject = encodeURIComponent('New Website Inquiry - KSPL');
+      const lines = [
+        'New inquiry submitted from KSPL website:',
+        '',
+        'Full Name: ' + (data.get('full_name') || ''),
+        'Email Address: ' + (data.get('email') || ''),
+        'Phone Number: ' + (data.get('phone') || ''),
+        'Location: ' + (data.get('location') || ''),
+        'Company: ' + (data.get('company') || ''),
+        'Inquiry Type: ' + (data.get('inquiry_type') || ''),
+        '',
+        'Message:',
+        data.get('message') || ''
+      ];
+      window.location.href = 'mailto:' + inquiryEmail + '?subject=' + subject + '&body=' + encodeURIComponent(lines.join('\n'));
+    });
+  });
+})();
+</script></body></html>

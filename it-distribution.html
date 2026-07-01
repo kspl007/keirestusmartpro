@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IT Distribution | KSPL Enterprise Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#82a8f8",
+                    "on-tertiary-fixed": "#410001",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#82cfff",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#313030",
+                    "on-surface": "#1c1b1b",
+                    "secondary-fixed": "#c6e7ff",
+                    "on-primary-fixed-variant": "#13448d",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#d8e2ff",
+                    "on-surface-variant": "#434751",
+                    "inverse-primary": "#aec6ff",
+                    "on-secondary-fixed": "#001e2d",
+                    "on-primary-fixed": "#001a42",
+                    "tertiary-fixed-dim": "#ffb4aa",
+                    "surface": "#fcf9f8",
+                    "inverse-on-surface": "#f3f0ef",
+                    "tertiary": "#590002",
+                    "surface-container-low": "#f6f3f2",
+                    "on-secondary-container": "#004866",
+                    "outline-variant": "#c3c6d3",
+                    "on-tertiary-fixed-variant": "#930006",
+                    "on-error": "#ffffff",
+                    "secondary-container": "#2dbcfe",
+                    "outline": "#737782",
+                    "secondary": "#00658d",
+                    "primary-container": "#003b84",
+                    "error": "#ba1a1a",
+                    "on-tertiary-container": "#ff8576",
+                    "surface-container": "#f0eded",
+                    "surface-bright": "#fcf9f8",
+                    "surface-variant": "#e5e2e1",
+                    "background": "#fcf9f8",
+                    "surface-tint": "#335da7",
+                    "surface-dim": "#dcd9d9",
+                    "surface-container-high": "#eae7e7",
+                    "tertiary-container": "#820004",
+                    "on-secondary-fixed-variant": "#004c6b",
+                    "primary": "#00265a",
+                    "surface-container-lowest": "#ffffff",
+                    "on-background": "#1c1b1b",
+                    "tertiary-fixed": "#ffdad5",
+                    "on-primary": "#ffffff",
+                    "surface-container-highest": "#e5e2e1",
+                    "primary-fixed-dim": "#aec6ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "section-gap": "80px",
+                    "margin": "32px",
+                    "gutter": "24px",
+                    "element-gap": "16px"
+            },
+            "fontFamily": {
+                    "label-md": ["Inter"],
+                    "button": ["Inter"],
+                    "label-lg": ["Inter"],
+                    "headline-xl": ["Work Sans"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Work Sans"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Work Sans"],
+                    "body-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "label-md": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                    "button": ["14px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "label-lg": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .nav-active-border {
+            position: relative;
+        }
+        .nav-active-border::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #003b84;
+        }
+        .hero-overlay {
+            background: linear-gradient(90deg, rgba(0,38,90,0.9) 0%, rgba(0,38,90,0.4) 100%);
+        }
+    </style>
+<style id="kspl-responsive-fixes">
+@media (max-width: 767px){
+  .kspl-menu-toggle{display:inline-flex!important;align-items:center;justify-content:center;}
+  body{overflow-x:hidden;}
+  img{max-width:100%;height:auto;}
+  iframe{max-width:100%;}
+  h1{word-break:normal;}
+  .px-8{padding-left:1rem!important;padding-right:1rem!important;}
+  .h-24{height:5rem!important;}
+  .h-20{height:4.5rem!important;}
+}
+</style></head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-white border-b border-outline-variant docked full-width top-0 z-50 sticky shadow-sm">
+<div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto w-full">
+<div class="flex items-center">
+<a href="index.html">
+<div class="flex flex-col leading-tight">
+  <span class="text-lg md:text-xl font-bold tracking-wide text-[#0B1F3A]">KEIRESTU SMART PRO</span>
+  <span class="text-[10px] md:text-xs uppercase tracking-[0.25em] text-[#1E88C8] font-semibold">Private Limited</span>
+</div>
+</a>
+</div>
+<nav class="hidden md:flex items-center gap-8 font-['Work_Sans'] font-medium text-sm tracking-tight">
+<a class="text-on-surface hover:text-primary transition-colors duration-200" href="index.html">Home</a>
+<a class="text-on-surface hover:text-primary transition-colors duration-200" href="about.html">About Us</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="verticals.html">Verticals</a>
+<div class="relative group">
+<button class="flex items-center gap-1 text-on-surface hover:text-primary transition-colors duration-200 font-medium">
+                    Products <span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<div class="absolute top-full left-0 mt-2 w-48 bg-white shadow-xl border border-outline-variant rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[60]">
+<a class="block px-4 py-2 text-sm text-on-surface-variant hover:bg-surface-container hover:text-primary" href="partners.html#dell" id="dell">Dell</a>
+<a class="block px-4 py-2 text-sm text-on-surface-variant hover:bg-surface-container hover:text-primary" href="partners.html#hikvision" id="hikvision">Hikvision</a>
+<a class="block px-4 py-2 text-sm text-on-surface-variant hover:bg-surface-container hover:text-primary" href="partners.html#digisol" id="digisol">Digisol</a>
+<a class="block px-4 py-2 text-sm text-on-surface-variant hover:bg-surface-container hover:text-primary" href="partners.html#sony" id="sony">Sony</a>
+<a class="block px-4 py-2 text-sm text-on-surface-variant hover:bg-surface-container hover:text-primary" href="partners.html#sophos" id="sophos">Sophos</a>
+<a class="block px-4 py-2 text-sm text-on-surface-variant hover:bg-surface-container hover:text-primary" href="partners.html#seagate" id="seagate">Seagate</a>
+<a class="block px-4 py-2 text-sm text-on-surface-variant hover:bg-surface-container hover:text-primary" href="partners.html#hp" id="hp">HP</a>
+<a class="block px-4 py-2 text-sm text-on-surface-variant hover:bg-surface-container hover:text-primary" href="partners.html#prama" id="prama">Prama</a>
+</div>
+</div>
+<a class="text-on-surface hover:text-primary transition-colors duration-200" href="partners.html">Partners</a>
+<a class="text-on-surface hover:text-primary transition-colors duration-200" href="contact.html">Contact</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container p-2 rounded-full transition-colors">search</button>
+<a href="contact.html" class="bg-primary text-on-primary px-6 py-2.5 font-button text-button rounded hover:shadow-lg active:scale-95 transition-all">Submit Inquiry</a>
+</div>
+<button aria-label="Open menu" class="kspl-menu-toggle md:hidden material-symbols-outlined text-slate-700 p-2 rounded-lg border border-slate-200 bg-white">menu</button></div>
+<div class="kspl-mobile-menu hidden md:hidden border-t border-slate-200 bg-white px-6 py-4 space-y-3 shadow-lg">
+<a class="block text-sm font-medium text-slate-700" href="index.html">Home</a>
+<a class="block text-sm font-medium text-slate-700" href="about.html">About Us</a>
+<a class="block text-sm font-medium text-slate-700" href="verticals.html">Verticals</a>
+<a class="block text-sm font-medium text-slate-700" href="partners.html">Partners</a>
+<a class="block text-sm font-medium text-slate-700" href="it-distribution.html">IT Distribution</a>
+<a class="block text-sm font-medium text-slate-700" href="contact.html">Contact</a>
+</div></header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[650px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A sophisticated, high-tech server room with glowing blue LED lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoMYEpuC1u3rIYmwVfE31k4wjJ37Cc4_yM4fX35A8yBA7stMkglin9jCVwLmAhRRctZBUQFo0rnx9EVRDZl5g7FefbL6MX5xgntbjmL2Hk3x_GQo0XF7tg-40xb6RTqXU7apmIauynyhFPQdYGysGhMLrBybJlZWl7JUNy3gMXvPgwquE99c28xasT-LSCevao6Zmyhv-C2oSCr16_t0sYsEwSMEOlGsOfQOaRWdc98Tz5daU_Q8Ygp-b6gr_sETYzvMqwQo-1rkU"/>
+<div class="absolute inset-0 hero-overlay"></div>
+</div>
+<div class="max-w-7xl mx-auto px-8 w-full relative z-10">
+<div class="max-w-2xl">
+<span class="inline-block px-4 py-1.5 bg-secondary text-white font-label-lg text-label-lg uppercase mb-6 rounded-full shadow-lg">IT Distribution Vertical</span>
+<h1 class="font-headline-xl text-headline-xl text-white mb-6 drop-shadow-md">The High-Performance Bridge for Enterprise Infrastructure</h1>
+<p class="font-body-lg text-body-lg text-primary-fixed mb-8 leading-relaxed max-w-xl">KSPL streamlines the complex journey of technology from global manufacturers to your enterprise floor, ensuring reliability, speed, and technical excellence.</p>
+<div class="flex gap-4">
+<a class="bg-white text-primary px-8 py-4 font-button text-button rounded flex items-center gap-2 hover:bg-surface-bright shadow-lg transition-all" href="index.html#products">
+                    Explore Catalog <span class="material-symbols-outlined">chevron_right</span>
+</a>
+<a download="KYC-form-KSPL.docx" class="border-2 border-white/50 text-white px-8 py-4 font-button text-button rounded hover:bg-white/10 backdrop-blur-sm transition-all" href="partners.html">
+                    Partner With Us
+                </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Vertical Focus: Hardware & Networking -->
+<section class="py-section-gap px-8 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+<div class="md:col-span-5">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Comprehensive Component Ecosystem</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">We manage the end-to-end distribution of critical IT assets, specializing in hardware that powers the modern enterprise. From high-density server architectures to robust networking perimeters, our inventory is curated for stability.</p>
+<ul class="space-y-5">
+<li class="flex items-center gap-4 font-label-lg text-primary group">
+<span class="material-symbols-outlined text-secondary text-2xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="group-hover:translate-x-1 transition-transform">Enterprise Servers &amp; Storage</span>
+</li>
+<li class="flex items-center gap-4 font-label-lg text-primary group">
+<span class="material-symbols-outlined text-secondary text-2xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="group-hover:translate-x-1 transition-transform">Advanced Networking Infrastructure</span>
+</li>
+<li class="flex items-center gap-4 font-label-lg text-primary group">
+<span class="material-symbols-outlined text-secondary text-2xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="group-hover:translate-x-1 transition-transform">Client Computing &amp; Peripherals</span>
+</li>
+<li class="flex items-center gap-4 font-label-lg text-primary group">
+<span class="material-symbols-outlined text-secondary text-2xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="group-hover:translate-x-1 transition-transform">Critical Power &amp; Cooling Systems</span>
+</li>
+</ul>
+</div>
+<div class="md:col-span-7 grid grid-cols-2 gap-6">
+<div class="space-y-6">
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-xl aspect-square">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="High-end computer processor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrwcpTAgFw--D55wCnMbe9LGQ9kVuZO9O3mqgad2sW8lDbcm3OntZ1_67aEriezssSIiL-g0yK3W-VDtTRuJvtJdY719Kk0BA9pQxzo-O7uzHJgPJJnjIYyQhMNhNX2_GbrejetPhzWNqSHwYL1Z6u1OFTFXdhHsWAcZoATL2nR9kJmDs-mDKRq2rTRbX5Nw6Cx3arg3VGc9BUvj_6bTdPCmniziviqDzCstYaw8pJZfpeThSvvpLxu8losXFjgsCn98Vwao0BBZU"/>
+</div>
+<div class="bg-secondary p-8 rounded-xl flex flex-col justify-end h-56 shadow-lg">
+<span class="text-5xl font-bold text-white mb-2">15k+</span>
+<span class="font-label-md text-label-md text-white/80 uppercase tracking-widest font-semibold">SKUs Managed</span>
+</div>
+</div>
+<div class="pt-12 space-y-6">
+<div class="bg-primary p-8 rounded-xl flex flex-col justify-end h-56 shadow-lg">
+<span class="text-5xl font-bold text-white mb-2">99.9%</span>
+<span class="font-label-md text-label-md text-white/80 uppercase tracking-widest font-semibold">Inventory Accuracy</span>
+</div>
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-xl aspect-square">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Network administrator organizing cables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB5S_WAwXCn_R6knXipdq6EYtZBo26RkgyhwH_7_x1SfvuAB4lxfpk-R-mzQhWCNvuvQfVrzqAtG5qfvHiQPTuD6DnAq3xeqOcB_VK5UDtUEaOILgwmVsRSgpmuwJXcinXsl3vTvcp8rQE66K5Zay-WAIImmEmmOZblwxOhPHPvbAWacbr_1cH5WQNDA7zYvzWhkBQW0WDkEe8uif7c-pU4VouzfLSXhTp8e9V9y8CWJp5dPVoDD6OlHQ0orBH-sy2dWy2e5Cbn8M"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Supply Chain Excellence -->
+<section class="bg-surface-container-lowest py-section-gap">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Precision Logistics &amp; Supply Chain</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Our distribution network is built on a foundation of architectural efficiency and real-time intelligence.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Step 1 -->
+<div class="bg-white p-10 rounded-xl border border-outline-variant hover:border-secondary hover:shadow-2xl transition-all group">
+<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-8 group-hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-on-primary-container group-hover:text-white text-3xl">warehouse</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Strategic Warehousing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 leading-relaxed">Strategically located hubs across the region ensure that mission-critical hardware is always within a 24-hour reach of major enterprise centers.</p>
+<div class="h-1.5 w-16 bg-secondary/30 rounded-full group-hover:w-full transition-all duration-300"></div>
+</div>
+<!-- Step 2 -->
+<div class="bg-white p-10 rounded-xl border border-outline-variant hover:border-secondary hover:shadow-2xl transition-all group">
+<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-8 group-hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-on-primary-container group-hover:text-white text-3xl">monitoring</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Real-time Tracking</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 leading-relaxed">Integrated ERP systems provide full transparency into the supply chain, from manufacturer dispatch to last-mile delivery.</p>
+<div class="h-1.5 w-16 bg-secondary/30 rounded-full group-hover:w-full transition-all duration-300"></div>
+</div>
+<!-- Step 3 -->
+<div class="bg-white p-10 rounded-xl border border-outline-variant hover:border-secondary hover:shadow-2xl transition-all group">
+<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-8 group-hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-on-primary-container group-hover:text-white text-3xl">shield</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Certified Quality Control</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 leading-relaxed">Every component undergoes rigorous authentication and handling protocols to ensure pristine condition upon arrival.</p>
+<div class="h-1.5 w-16 bg-secondary/30 rounded-full group-hover:w-full transition-all duration-300"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Brand Partnerships -->
+<section class="py-section-gap px-8 max-w-7xl mx-auto">
+<div class="border-t border-outline-variant pt-16">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Our Strategic Partners</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">We bridge global tech leaders with local enterprise markets.</p>
+</div>
+
+</div>
+<div class="flex gap-6 items-center overflow-x-auto pb-4 snap-x">
+<a class="min-w-[180px] p-8 flex justify-center items-center bg-white border border-outline-variant rounded-xl shadow-sm hover:shadow-md transition-all h-32 snap-center" href="https://www.dell.com/en-in/lp" target="_blank" rel="noopener noreferrer" aria-label="Visit Dell official website">
+<img alt="Dell" class="max-h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" src="assets/dell-logo.png"/>
+</a>
+<a class="min-w-[180px] p-8 flex justify-center items-center bg-white border border-outline-variant rounded-xl shadow-sm hover:shadow-md transition-all h-32 snap-center" href="https://www.hikvision.com/en/" target="_blank" rel="noopener noreferrer" aria-label="Visit Hikvision official website">
+<img alt="Hikvision" class="max-h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" src="assets/hikvision-logo.png"/>
+</a>
+<a class="min-w-[180px] p-8 flex justify-center items-center bg-white border border-outline-variant rounded-xl shadow-sm hover:shadow-md transition-all h-32 snap-center" href="https://www.digisol.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Digisol official website">
+<img alt="Digisol" class="max-h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" src="assets/digisol-logo.png"/>
+</a>
+<a class="min-w-[180px] p-8 flex justify-center items-center bg-white border border-outline-variant rounded-xl shadow-sm hover:shadow-md transition-all h-32 snap-center" href="https://www.sony.co.in/homepage" target="_blank" rel="noopener noreferrer" aria-label="Visit Sony official website">
+<img alt="Sony" class="max-h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" src="assets/sony-logo.png"/>
+</a>
+<a class="min-w-[180px] p-8 flex justify-center items-center bg-white border border-outline-variant rounded-xl shadow-sm hover:shadow-md transition-all h-32 snap-center" href="https://www.sophos.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Sophos official website">
+<img alt="Sophos" class="max-h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" src="assets/sophos-logo.png"/>
+</a>
+<a class="min-w-[180px] p-8 flex justify-center items-center bg-white border border-outline-variant rounded-xl shadow-sm hover:shadow-md transition-all h-32 snap-center" href="https://www.seagate.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Seagate official website">
+<img alt="Seagate" class="max-h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" src="assets/seagate-logo.png"/>
+</a>
+<a class="min-w-[180px] p-8 flex justify-center items-center bg-white border border-outline-variant rounded-xl shadow-sm hover:shadow-md transition-all h-32 snap-center" href="https://www.hp.com/in-en/home.html" target="_blank" rel="noopener noreferrer" aria-label="Visit HP official website">
+<img alt="HP" class="max-h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" src="assets/hp-logo.png"/>
+</a>
+<a class="min-w-[180px] p-8 flex justify-center items-center bg-white border border-outline-variant rounded-xl shadow-sm hover:shadow-md transition-all h-32 snap-center" href="https://www.prama.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Prama official website">
+<img alt="Prama" class="max-h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" src="assets/prama-logo.png"/>
+</a>
+</div>
+</section>
+<!-- Market Reach Map -->
+<section class="bg-primary py-section-gap text-white relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+<svg class="w-full h-full fill-white" viewbox="0 0 100 100">
+<circle cx="100" cy="0" r="80"></circle>
+</svg>
+</div>
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
+<div>
+<h2 class="font-headline-xl text-headline-xl mb-8">Expanding the Digital Frontier</h2>
+<p class="font-body-lg text-body-lg text-primary-fixed mb-12 leading-relaxed">KSPL operates across 12 countries with 45+ distribution centers, creating a seamless mesh of technology availability for global enterprises operating in emerging markets.</p>
+<div class="space-y-10">
+<div class="flex items-start gap-6 group">
+<div class="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl">public</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] text-white mb-2">Global Integration</h4>
+<p class="font-body-sm text-primary-fixed leading-relaxed">Unified distribution standards across all international territories, ensuring consistent service delivery.</p>
+</div>
+</div>
+<div class="flex items-start gap-6 group">
+<div class="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl">local_shipping</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] text-white mb-2">Last-Mile Specialized</h4>
+<p class="font-body-sm text-primary-fixed leading-relaxed">Advanced local logistics for complex urban and remote deployments, where reliability is paramount.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -inset-6 bg-secondary/20 blur-[100px] rounded-full"></div>
+<div class="relative border-4 border-white/10 rounded-2xl overflow-hidden shadow-2xl">
+<img class="w-full aspect-[4/3] object-cover" data-alt="A minimalist world map projected on a high-tech screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-u36lrHAcirFL57apHGdfq9JjXKzwJktx-_GLr6lAn93DOdaYIckkSBATqupkkbYCeo9EBtyO5Zokdbu4ZfCeGLPDZrDyykVRSnsF67SW_o4T6tXmPzMyatsScCThWNWMYX0mNFQkOKsUdl69oU69lI3lnCVYvehrkh4crDCzYQdaKA_JfmjXGj_izzR_jg8N2qDt1NS-uZQYAww4fV_yLus0o1Yp3vTjQ0UCyJb3VKUSGSZeWaMqkRzOKiV2Ik3_CWbFkcOldXA"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low text-on-surface border-t border-outline-variant w-full"><div class="max-w-7xl mx-auto px-8 w-full">
+<div class="flex flex-col md:flex-row justify-between items-center py-12 gap-8">
+<div class="flex items-center gap-4 flex-1">
+<a href="index.html">
+<div class="flex flex-col leading-tight">
+  <span class="text-lg md:text-xl font-bold tracking-wide text-[#0B1F3A]">KEIRESTU SMART PRO</span>
+  <span class="text-[10px] md:text-xs uppercase tracking-[0.25em] text-[#1E88C8] font-semibold">Private Limited</span>
+</div>
+</a>
+<span class="font-headline-md text-primary">KSPL Enterprise Solutions</span>
+</div>
+<nav class="flex flex-wrap justify-center gap-x-8 gap-y-4 flex-1">
+<a class="font-body-sm font-semibold text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-sm font-semibold text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-body-sm font-semibold text-on-surface-variant hover:text-primary transition-colors" href="#">CSR Policy</a>
+<a class="font-body-sm font-semibold text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Career</a>
+<a class="font-body-sm font-semibold text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Global Support</a>
+</nav>
+<div class="flex gap-4 justify-end flex-1">
+<div class="w-10 h-6 rounded-full border border-outline-variant flex items-center justify-center cursor-pointer hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</div>
+<div class="w-10 h-6 rounded-full border border-outline-variant flex items-center justify-center cursor-pointer hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-[20px]">language</span>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant py-8">
+<p class="font-body-sm text-on-surface-variant text-center">
+      Copyright 2022 -ITINFOWAYS.COM All Rights Reserved
+    </p>
+</div>
+</div></footer>
+<script id="kspl-nav-script">
+document.addEventListener('click', function(e){
+  const btn = e.target.closest('.kspl-menu-toggle');
+  if(!btn) return;
+  const bar = btn.closest('nav, header');
+  const menu = bar ? bar.querySelector('.kspl-mobile-menu') : document.querySelector('.kspl-mobile-menu');
+  if(menu) menu.classList.toggle('hidden');
+});
+</script></body></html>

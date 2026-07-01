@@ -1,0 +1,1 @@
+Open index.html to view the connected KSPL static site. Pages connected: Home, About, Verticals, Partners, IT Distribution, Contact. Mobile hamburger menu added for small screens. Original Stitch visuals were kept as much as possible; only links/navigation/responsive fixes were added.

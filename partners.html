@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Partners | KSPL</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#00265a",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed": "#001e2d",
+                    "surface-container-high": "#eae7e7",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface": "#fcf9f8",
+                    "tertiary": "#590002",
+                    "inverse-surface": "#313030",
+                    "on-surface": "#1c1b1b",
+                    "tertiary-fixed-dim": "#ffb4aa",
+                    "on-primary-container": "#82a8f8",
+                    "secondary": "#00658d",
+                    "tertiary-fixed": "#ffdad5",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#e5e2e1",
+                    "on-surface-variant": "#434751",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-tertiary-fixed": "#410001",
+                    "secondary-fixed": "#c6e7ff",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#335da7",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#004c6b",
+                    "surface-container": "#f0eded",
+                    "on-primary-fixed-variant": "#13448d",
+                    "surface-container-low": "#f6f3f2",
+                    "surface-bright": "#fcf9f8",
+                    "primary-container": "#003b84",
+                    "outline": "#737782",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#82cfff",
+                    "surface-dim": "#dcd9d9",
+                    "on-secondary-container": "#004866",
+                    "on-primary-fixed": "#001a42",
+                    "primary-fixed-dim": "#aec6ff",
+                    "background": "#fcf9f8",
+                    "on-tertiary-container": "#ff8576",
+                    "secondary-container": "#2dbcfe",
+                    "tertiary-container": "#820004",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#d8e2ff",
+                    "on-tertiary-fixed-variant": "#930006",
+                    "outline-variant": "#c3c6d3",
+                    "on-background": "#1c1b1b",
+                    "inverse-primary": "#aec6ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "section-gap": "80px",
+                    "gutter": "24px",
+                    "element-gap": "16px",
+                    "margin": "32px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Work Sans"],
+                    "headline-md": ["Work Sans"],
+                    "body-md": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-lg": ["Work Sans"],
+                    "label-lg": ["Inter"],
+                    "button": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-lg": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "button": ["14px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .partner-card:hover {
+            border-top-width: 2px;
+            border-top-color: #2dbcfe;
+            box-shadow: 0 10px 30px -10px rgba(0, 59, 132, 0.1);
+        }
+        .partner-logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            background: #fff;
+            border: 1px solid #c3c6d3;
+            transition: all 0.3s ease;
+            height: 160px;
+        }
+        .partner-logo-container:hover {
+            border-color: #00265a;
+            box-shadow: 0 4px 20px rgba(0, 38, 90, 0.08);
+        }
+    </style>
+<style id="kspl-responsive-fixes">
+@media (max-width: 767px){
+  .kspl-menu-toggle{display:inline-flex!important;align-items:center;justify-content:center;}
+  body{overflow-x:hidden;}
+  img{max-width:100%;height:auto;}
+  iframe{max-width:100%;}
+  h1{word-break:normal;}
+  .px-8{padding-left:1rem!important;padding-right:1rem!important;}
+  .h-24{height:5rem!important;}
+  .h-20{height:4.5rem!important;}
+}
+</style></head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar -->
+<nav class="bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50">
+<div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto w-full">
+<div class="flex items-center">
+<a href="index.html">
+<div class="flex flex-col leading-tight">
+  <span class="text-lg md:text-xl font-bold tracking-wide text-[#0B1F3A]">KEIRESTU SMART PRO</span>
+  <span class="text-[10px] md:text-xs uppercase tracking-[0.25em] text-[#1E88C8] font-semibold">Private Limited</span>
+</div>
+</a>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Work_Sans'] font-medium text-sm tracking-tight transition-colors duration-200 text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-white" href="index.html">Home</a>
+<a class="font-['Work_Sans'] font-medium text-sm tracking-tight transition-colors duration-200 text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-white" href="about.html">About Us</a>
+<a class="font-['Work_Sans'] font-medium text-sm tracking-tight transition-colors duration-200 text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-white" href="verticals.html">Verticals</a>
+<div class="group relative">
+<button class="flex items-center gap-1 font-['Work_Sans'] font-medium text-sm tracking-tight transition-colors duration-200 text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-white">
+                    Products
+                    <span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg shadow-xl py-2 z-[60]">
+<a class="block px-4 py-2 font-['Work_Sans'] font-medium text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-blue-900 dark:hover:text-white" href="it-distribution.html">Hardware Solutions</a>
+<a class="block px-4 py-2 font-['Work_Sans'] font-medium text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-blue-900 dark:hover:text-white" href="it-distribution.html">Software Licensing</a>
+<a class="block px-4 py-2 font-['Work_Sans'] font-medium text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-blue-900 dark:hover:text-white" href="it-distribution.html">Cloud Subscriptions</a>
+</div>
+</div>
+<a class="font-['Work_Sans'] font-medium text-sm tracking-tight transition-colors duration-200 text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-white underline decoration-2 underline-offset-8 decoration-primary" href="partners.html">Partners</a>
+<a class="font-['Work_Sans'] font-medium text-sm tracking-tight transition-colors duration-200 text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-white" href="contact.html">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<a href="contact.html" class="bg-primary text-white px-6 py-2.5 rounded font-['Work_Sans'] font-semibold text-sm tracking-tight transition-all duration-200 hover:bg-blue-800 shadow-sm">Submit Inquiry</a>
+</div>
+<button aria-label="Open menu" class="kspl-menu-toggle md:hidden material-symbols-outlined text-slate-700 p-2 rounded-lg border border-slate-200 bg-white">menu</button></div>
+<div class="kspl-mobile-menu hidden md:hidden border-t border-slate-200 bg-white px-6 py-4 space-y-3 shadow-lg">
+<a class="block text-sm font-medium text-slate-700" href="index.html">Home</a>
+<a class="block text-sm font-medium text-slate-700" href="about.html">About Us</a>
+<a class="block text-sm font-medium text-slate-700" href="verticals.html">Verticals</a>
+<a class="block text-sm font-medium text-slate-700" href="partners.html">Partners</a>
+<a class="block text-sm font-medium text-slate-700" href="it-distribution.html">IT Distribution</a>
+<a class="block text-sm font-medium text-slate-700" href="contact.html">Contact</a>
+</div></nav>
+<main class="min-h-screen">
+<!-- Hero Section -->
+<header class="relative py-24 bg-white overflow-hidden border-b border-outline-variant">
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="max-w-2xl">
+<span class="text-label-lg font-label-lg text-secondary uppercase mb-4 block">Ecosystem &amp; Alliances</span>
+<h1 class="text-headline-xl font-headline-xl text-primary mb-6">Our Strategic Partnerships</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant">We bridge the gap between world-class technology providers and enterprise-level execution. Our curated partner ecosystem ensures stability, innovation, and digital excellence.</p>
+</div>
+</div>
+<!-- Decorative geometric background -->
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
+<svg class="w-full h-full text-primary fill-current" viewbox="0 0 100 100">
+<path d="M0 0 L100 0 L100 100 Z"></path>
+</svg>
+</div>
+</header>
+<!-- Partner Filter & Stats -->
+<section class="bg-surface-container-low py-12 border-b border-outline-variant">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-wrap gap-4">
+<button class="px-6 py-2 rounded-full bg-primary text-on-primary text-label-lg font-label-lg">All Partners</button>
+
+
+<button class="px-6 py-2 rounded-full bg-white text-on-surface border border-outline-variant text-label-lg font-label-lg hover:bg-surface-container-high transition-colors">Network &amp; Security</button>
+</div>
+<div class="flex gap-12 text-center">
+<div>
+<div class="text-headline-md font-headline-md text-primary">50+</div>
+<div class="text-label-md font-label-md text-on-surface-variant">Global Alliances</div>
+</div>
+<div>
+<div class="text-headline-md font-headline-md text-primary">8</div>
+<div class="text-label-md font-label-md text-on-surface-variant">Strategic OEM Partners</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Partner Gallery (Clean Grid Style) -->
+<section class="py-20 max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
+<!-- Dell -->
+<a class="partner-logo-container group cursor-pointer" href="https://www.dell.com/en-in/lp" id="dell" target="_blank" rel="noopener noreferrer" aria-label="Visit Dell official website">
+<img alt="Dell" class="max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="assets/dell-logo.png"/>
+</a>
+<!-- Hikvision -->
+<a class="partner-logo-container group cursor-pointer" href="https://www.hikvision.com/en/" id="hikvision" target="_blank" rel="noopener noreferrer" aria-label="Visit Hikvision official website">
+<img alt="Hikvision" class="max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="assets/hikvision-logo.png"/>
+</a>
+<!-- Digisol -->
+<a class="partner-logo-container group cursor-pointer" href="https://www.digisol.com/" id="digisol" target="_blank" rel="noopener noreferrer" aria-label="Visit Digisol official website">
+<img alt="Digisol" class="max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="assets/digisol-logo.png"/>
+</a>
+<!-- Sony -->
+<a class="partner-logo-container group cursor-pointer" href="https://www.sony.co.in/homepage" id="sony" target="_blank" rel="noopener noreferrer" aria-label="Visit Sony official website">
+<img alt="Sony" class="max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="assets/sony-logo.png"/>
+</a>
+<!-- Sophos -->
+<a class="partner-logo-container group cursor-pointer" href="https://www.sophos.com/" id="sophos" target="_blank" rel="noopener noreferrer" aria-label="Visit Sophos official website">
+<img alt="Sophos" class="max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="assets/sophos-logo.png"/>
+</a>
+<!-- Seagate -->
+<a class="partner-logo-container group cursor-pointer" href="https://www.seagate.com/" id="seagate" target="_blank" rel="noopener noreferrer" aria-label="Visit Seagate official website">
+<img alt="Seagate" class="max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="assets/seagate-logo.png"/>
+</a>
+<!-- HP -->
+<a class="partner-logo-container group cursor-pointer" href="https://www.hp.com/in-en/home.html" id="hp" target="_blank" rel="noopener noreferrer" aria-label="Visit HP official website">
+<img alt="HP" class="max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="assets/hp-logo.png"/>
+</a>
+<!-- Prama -->
+<a class="partner-logo-container group cursor-pointer" href="https://www.prama.com/" id="prama" target="_blank" rel="noopener noreferrer" aria-label="Visit Prama official website">
+<img alt="Prama" class="max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="assets/prama-logo.png"/>
+</a>
+</div>
+</section>
+<!-- Featured Collaboration (Optional kept for structure but updated) -->
+<section class="py-20 bg-primary overflow-hidden relative group max-w-7xl mx-auto px-8 rounded-xl mb-20">
+<div class="absolute inset-0 bg-primary-container opacity-80 z-10"></div>
+<img alt="Innovation" class="absolute inset-0 w-full h-full object-cover grayscale brightness-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR0mAf5cPDHJnRhq5SToIhIjtQf06GnggToqDyrlmDSUz1gfwkBjXbbtScOAvNMR6A0tXL7qcYVYWZNcLBbQaA_BfQb-_BPrZv7OFXGRHLasv8nXBrmREZrk9DY52ZlRmU9cCz99DcpPS410a61ZIEod9Cd2W28Rl3lAPrb3hQPwXJmn8lREjjkTxI5-MYTa_Dwb0m2TEX7bzbze93pC-gOt3azuvzeNRP8RKpVdo5XJ9fnwkxVLyfmAqtI8iUlnkBhtNfZ8pVQD0"/>
+<div class="relative z-20 p-12 h-full flex flex-col justify-end min-h-[400px]">
+<span class="text-label-lg font-label-lg text-secondary-fixed mb-4">Featured Collaboration 2024</span>
+<h2 class="text-headline-lg font-headline-lg text-white mb-4 leading-tight">Empowering Innovation Through Global Synergy</h2>
+<p class="text-body-md font-body-md text-primary-fixed mb-8 max-w-lg">Our joint venture with leading silicon manufacturers brings next-generation edge computing to our local markets.</p>
+<a download="KYC-form-KSPL.docx" class="w-fit bg-white text-primary px-8 py-3 rounded-lg font-button text-button hover:bg-secondary-fixed transition-colors" href="partners.html#partner-application">Join the Network</a>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-surface-container-high py-24" id="partner-application">
+<div class="max-w-7xl mx-auto px-8 text-center">
+<div class="max-w-2xl mx-auto">
+<h2 class="text-headline-lg font-headline-lg text-primary mb-6">Become a KSPL Technology Partner</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-10">Expand your reach and join an elite group of technology providers delivering enterprise solutions across the globe.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<a href="downloads/KYC-form-KSPL.docx" download="KYC-form-KSPL.docx"><button class="bg-primary text-on-primary px-10 py-4 rounded-lg font-button text-button hover:bg-primary-container transition-all flex items-center justify-center gap-2">
+                        Partner Application <span class="material-symbols-outlined">description</span>
+</button></a>
+<a href="downloads/ download><a href="downloads/ download><button class="border border-primary text-primary px-10 py-4 rounded-lg font-button text-button hover:bg-surface transition-all flex items-center justify-center gap-2">
+                        Credit Agreement Form <span class="material-symbols-outlined">download</span>
+</button></a></a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+<div class="flex flex-col md:flex-row justify-between items-start py-16 px-8 max-w-7xl mx-auto w-full gap-12">
+<div class="flex flex-col gap-6 max-w-sm">
+<a href="index.html">
+<div class="flex flex-col leading-tight">
+  <span class="text-lg md:text-xl font-bold tracking-wide text-[#0B1F3A]">KEIRESTU SMART PRO</span>
+  <span class="text-[10px] md:text-xs uppercase tracking-[0.25em] text-[#1E88C8] font-semibold">Private Limited</span>
+</div>
+</a>
+<p class="text-sm text-slate-500 dark:text-slate-400 font-body-sm leading-relaxed">
+                Bridging the gap between world-class technology and enterprise excellence with end-to-end IT solutions.
+            </p>
+<div class="text-sm font-medium text-slate-600 dark:text-slate-300">
+                Copyright 2022 -ITINFOWAYS.COM All Rights Reserved
+            </div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-12">
+<div class="flex flex-col gap-4">
+<h4 class="font-headline-md text-sm uppercase tracking-wider text-primary dark:text-white">Company</h4>
+<div class="flex flex-col gap-2">
+<a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="about.html">About Us</a>
+<a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="verticals.html">Verticals</a>
+<a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="partners.html">Partners</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-headline-md text-sm uppercase tracking-wider text-primary dark:text-white">Support</h4>
+<div class="flex flex-col gap-2">
+<a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="contact.html">Contact Us</a>
+<a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="contact.html">Global Support</a>
+<a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="contact.html">FAQ</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-headline-md text-sm uppercase tracking-wider text-primary dark:text-white">Legal</h4>
+<div class="flex flex-col gap-2">
+<a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script id="kspl-nav-script">
+document.addEventListener('click', function(e){
+  const btn = e.target.closest('.kspl-menu-toggle');
+  if(!btn) return;
+  const bar = btn.closest('nav, header');
+  const menu = bar ? bar.querySelector('.kspl-mobile-menu') : document.querySelector('.kspl-mobile-menu');
+  if(menu) menu.classList.toggle('hidden');
+});
+</script></body></html>

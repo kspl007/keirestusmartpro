@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | KSPL - Bridging Technology and Enterprise</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#00265a",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed": "#001e2d",
+                    "surface-container-high": "#eae7e7",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface": "#fcf9f8",
+                    "tertiary": "#590002",
+                    "inverse-surface": "#313030",
+                    "on-surface": "#1c1b1b",
+                    "tertiary-fixed-dim": "#ffb4aa",
+                    "on-primary-container": "#82a8f8",
+                    "secondary": "#00658d",
+                    "tertiary-fixed": "#ffdad5",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#e5e2e1",
+                    "on-surface-variant": "#434751",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-tertiary-fixed": "#410001",
+                    "secondary-fixed": "#c6e7ff",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#335da7",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#004c6b",
+                    "surface-container": "#f0eded",
+                    "on-primary-fixed-variant": "#13448d",
+                    "surface-container-low": "#f6f3f2",
+                    "surface-bright": "#fcf9f8",
+                    "primary-container": "#003b84",
+                    "outline": "#737782",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#82cfff",
+                    "surface-dim": "#dcd9d9",
+                    "on-secondary-container": "#004866",
+                    "on-primary-fixed": "#001a42",
+                    "primary-fixed-dim": "#aec6ff",
+                    "background": "#fcf9f8",
+                    "on-tertiary-container": "#ff8576",
+                    "secondary-container": "#2dbcfe",
+                    "tertiary-container": "#820004",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#d8e2ff",
+                    "on-tertiary-fixed-variant": "#930006",
+                    "outline-variant": "#c3c6d3",
+                    "on-background": "#1c1b1b",
+                    "inverse-primary": "#aec6ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "section-gap": "80px",
+                    "gutter": "24px",
+                    "element-gap": "16px",
+                    "margin": "32px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Work Sans"],
+                    "headline-md": ["Work Sans"],
+                    "body-md": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-lg": ["Work Sans"],
+                    "label-lg": ["Inter"],
+                    "button": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-lg": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "button": ["14px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style id="kspl-responsive-fixes">
+@media (max-width: 767px){
+  .kspl-menu-toggle{display:inline-flex!important;align-items:center;justify-content:center;}
+  body{overflow-x:hidden;}
+  img{max-width:100%;height:auto;}
+  iframe{max-width:100%;}
+  h1{word-break:normal;}
+  .px-8{padding-left:1rem!important;padding-right:1rem!important;}
+  .h-24{height:5rem!important;}
+  .h-20{height:4.5rem!important;}
+}
+</style></head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-white fixed top-0 left-0 right-0 z-50 border-b border-slate-200">
+<div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto w-full">
+<div class="flex items-center">
+<a href="index.html">
+<div class="flex flex-col leading-tight">
+  <span class="text-lg md:text-xl font-bold tracking-wide text-[#0B1F3A]">KEIRESTU SMART PRO</span>
+  <span class="text-[10px] md:text-xs uppercase tracking-[0.25em] text-[#1E88C8] font-semibold">Private Limited</span>
+</div>
+</a>
+</div>
+<nav class="hidden md:flex gap-8 items-center font-['Work_Sans'] font-medium text-sm tracking-tight">
+<a class="text-slate-600 hover:text-primary transition-colors duration-200" href="index.html">Home</a>
+<a class="text-primary border-b-2 border-primary pb-1" href="about.html">About Us</a>
+<a class="text-slate-600 hover:text-primary transition-colors duration-200" href="verticals.html">Verticals</a>
+<div class="group relative inline-block">
+<button class="flex items-center gap-1 text-slate-600 hover:text-primary transition-colors duration-200 focus:outline-none">
+                        Products
+                        <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="absolute left-0 mt-2 w-48 bg-white border border-slate-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+<div class="py-2">
+<a class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary" href="partners.html#dell" id="dell">Dell</a>
+<a class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary" href="partners.html#hikvision" id="hikvision">Hikvision</a>
+<a class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary" href="partners.html#digisol" id="digisol">Digisol</a>
+<a class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary" href="partners.html#sony" id="sony">Sony</a>
+<a class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary" href="partners.html#sophos" id="sophos">Sophos</a>
+<a class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary" href="partners.html#seagate" id="seagate">Seagate</a>
+<a class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary" href="partners.html#hp" id="hp">HP</a>
+<a class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary" href="partners.html#prama" id="prama">Prama</a>
+</div>
+</div>
+</div>
+<a class="text-slate-600 hover:text-primary transition-colors duration-200" href="partners.html">Partners</a>
+<a class="text-slate-600 hover:text-primary transition-colors duration-200" href="contact.html">Contact</a>
+</nav>
+<div class="flex items-center">
+<a href="contact.html" class="px-5 py-2.5 bg-primary text-on-primary font-button text-button hover:bg-primary-container transition-all active:scale-95 shadow-sm">Submit Inquiry</a>
+</div>
+<button aria-label="Open menu" class="kspl-menu-toggle md:hidden material-symbols-outlined text-slate-700 p-2 rounded-lg border border-slate-200 bg-white">menu</button></div>
+<div class="kspl-mobile-menu hidden md:hidden border-t border-slate-200 bg-white px-6 py-4 space-y-3 shadow-lg">
+<a class="block text-sm font-medium text-slate-700" href="index.html">Home</a>
+<a class="block text-sm font-medium text-slate-700" href="about.html">About Us</a>
+<a class="block text-sm font-medium text-slate-700" href="verticals.html">Verticals</a>
+<a class="block text-sm font-medium text-slate-700" href="partners.html">Partners</a>
+<a class="block text-sm font-medium text-slate-700" href="it-distribution.html">IT Distribution</a>
+<a class="block text-sm font-medium text-slate-700" href="contact.html">Contact</a>
+</div></header>
+<main class="mt-20">
+<!-- Hero Section -->
+<section class="relative h-[600px] flex items-center bg-primary overflow-hidden">
+<div class="absolute inset-0 opacity-20">
+<img alt="Data center view" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaOddL9KH4aHwwb9h87407cMYih9PZzEPW9-Lyh-_FtMBi0LMnUV49R74aEqjOMVjK_BzG6V92o7dmY5lMcPWMgvjCwFuOF4j-F21OQ8q20FbkYu38eaOAXFOKQj0FOGMxNtKh7A3y52vVaCVffY_nh5zQwS5BzgfvxE5aaChgFp-zYvFTwT2JKNYuACpjB1vMg8LiMo3Aka21vUec-y5TqDuMjliSEb17IisXuO8ub49XGDFXYmmNR08aI2aEDt140o093LCdedo"/>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+<div class="max-w-2xl">
+<span class="inline-block py-1 px-3 bg-secondary-container text-on-secondary-container font-label-lg text-label-lg mb-6 rounded uppercase tracking-wider">Established 2018</span>
+<h1 class="font-headline-xl text-headline-xl text-white mb-6">Bridging the Gap Between <span class="text-secondary-fixed">Customer and Technology.</span></h1>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim leading-relaxed">
+                        KEIRESTU SMART PRO PVT LTD is a leading value-added distributor specializing in IT and Surveillance solutions, committed to excellence since our inception.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Company Introduction: Bento Grid Layout -->
+<section class="max-w-7xl mx-auto px-8 py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Story Card -->
+<div class="md:col-span-8 bg-surface-container-lowest p-margin border border-outline-variant hover:border-secondary transition-all">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Our Journey</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 leading-relaxed">
+                        Established in 2018, KEIRESTU SMART PRO PVT LTD (KSPL) emerged with a clear vision: to redefine the landscape of Value-Added Distribution in the IT and Surveillance sectors. We didn't just want to move boxes; we aimed to build bridges.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Our motto, "Bridging the Gap Between Customer and Technology," drives every decision we make. We provide cost-effective products and comprehensive solutions that empower businesses to thrive in an increasingly digital world.
+                    </p>
+</div>
+<!-- Growth Stat Card -->
+<div class="md:col-span-4 bg-primary p-margin flex flex-col justify-center text-center">
+<span class="material-symbols-outlined text-secondary-fixed text-5xl mb-4">trending_up</span>
+<div class="font-headline-xl text-headline-xl text-white mb-2">35%</div>
+<p class="font-label-lg text-label-lg text-white uppercase tracking-widest">Projected Growth</p>
+<p class="mt-4 font-body-sm text-body-sm text-primary-fixed-dim">Expanding our reach through strategic brand partnerships and innovation.</p>
+</div>
+<!-- Core Values Cards -->
+<div class="md:col-span-3 bg-surface-container-low p-margin border border-outline-variant flex flex-col items-center text-center hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary text-3xl mb-4" style="font-variation-settings: 'FILL' 1;">sentiment_very_satisfied</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Customer First</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Unwavering commitment to client satisfaction and long-term success.</p>
+</div>
+<div class="md:col-span-3 bg-surface-container-low p-margin border border-outline-variant flex flex-col items-center text-center hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary text-3xl mb-4" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Excel with Passion</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">A relentless drive to surpass industry standards in everything we do.</p>
+</div>
+<div class="md:col-span-3 bg-surface-container-low p-margin border border-outline-variant flex flex-col items-center text-center hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary text-3xl mb-4" style="font-variation-settings: 'FILL' 1;">groups</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Dynamic Teamwork</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Collaborative efforts that leverage collective expertise for enterprise solutions.</p>
+</div>
+<div class="md:col-span-3 bg-surface-container-low p-margin border border-outline-variant flex flex-col items-center text-center hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary text-3xl mb-4" style="font-variation-settings: 'FILL' 1;">gavel</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Strong Ethics</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Built on a foundation of integrity, transparency, and professional accountability.</p>
+</div>
+</div>
+</section>
+<!-- Leadership Section: Director's Messages -->
+<section class="bg-surface-container-lowest py-section-gap border-y border-outline-variant">
+<div class="max-w-7xl mx-auto px-8">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-16 text-center relative inline-block left-1/2 -translate-x-1/2">
+                    Message from Our Leadership
+                    <span class="absolute -bottom-3 left-1/2 -translate-x-1/2 w-24 h-1.5 bg-secondary rounded-full"></span>
+</h2>
+<div class="flex flex-col gap-24">
+<!-- Message 1: Anil Sahoo -->
+<div class="flex flex-col lg:flex-row gap-16 items-start">
+<!-- Director Image -->
+<div class="w-full lg:w-1/3 flex-shrink-0">
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/5 rounded-xl transition-all group-hover:bg-primary/10"></div>
+<img alt="Anil Sahoo, Director of KSPL" class="relative w-full aspect-[3/4] object-cover shadow-2xl grayscale hover:grayscale-0 transition-all duration-500 border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrtC-RLENZxuR82UcBR9qy9ghrFIu8bdQ9SpbGDN6k9rXybHrZchAxy4UD7tqdm9DEUxiWltgHzf9FWTWZ_5aOtWpRVT3DjM0ZohtvAiJH2ghnlDV1cbxLH_C01sKmRM08PwHYUPF8kIhldwNn-802z81w_qO1WUcKc5hMjo2g5Y35Fe2eSqXlKFu6_Hnc-PgCVFdrlW1P-2hvZ-009JlMC7rgseaiUqrCFaNzExU13pYt-yXA07nC9t6sfca0va_d1rxgGAp6PVI"/>
+<div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-6 border-l-4 border-primary shadow-lg">
+<h4 class="font-headline-md text-primary text-xl">Anil Sahoo</h4>
+<p class="font-label-lg text-secondary uppercase tracking-widest mt-1">Director, KSPL</p>
+</div>
+</div>
+</div>
+<!-- Message Content -->
+<div class="w-full lg:w-2/3">
+<h3 class="font-headline-md text-headline-md text-primary mb-6">Building Trusted Partnerships</h3>
+<div class="space-y-6 text-on-surface-variant font-body-md leading-relaxed">
+<p class="font-medium text-on-surface italic">"It gives me immense pleasure to connect with you through the KSPL website."</p>
+<p class="">
+                                    KSPL has always focused on building strong business relationships through professionalism, consistency, and customer commitment. Our objective is not only to deliver products and solutions, but also to become a trusted long-term partner for our customers and associates.
+                                </p>
+<p class="">
+                                    Over the years, we have expanded our presence by adapting to changing market requirements and maintaining a strong focus on service quality and operational excellence. Every milestone achieved by KSPL is the result of teamwork, dedication, and the unwavering trust of our customers and partners.
+                                </p>
+<div class="bg-surface-container-low p-8 border-l-4 border-primary">
+<p class="font-headline-md text-primary text-lg mb-4">Our commitment remains centered on:</p>
+<ul class="space-y-3">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-xl shrink-0">check_circle</span>
+<span class="">Maintaining high standards of business ethics and transparency</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-xl shrink-0">check_circle</span>
+<span class="">Delivering timely and reliable support to customers and partners</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-xl shrink-0">check_circle</span>
+<span class="">Driving sustainable growth through innovation and efficiency</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-xl shrink-0">check_circle</span>
+<span class="">Creating value for all stakeholders</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-xl shrink-0">check_circle</span>
+<span class="">Building a culture of accountability, teamwork, and continuous learning</span>
+</li>
+</ul>
+</div>
+<div class="pt-6 border-t border-outline-variant mt-8">
+<p class="font-body-lg text-on-surface">Thank you for being part of our journey.</p>
+<div class="mt-4">
+<p class="font-headline-md text-primary">Anil Sahoo</p>
+<p class="font-label-lg text-on-surface-variant uppercase tracking-wider">Director KSPL</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Message 2: Anup Routray -->
+<div class="flex flex-col lg:flex-row-reverse gap-16 items-start">
+<!-- Director Image -->
+<div class="w-full lg:w-1/3 flex-shrink-0">
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/5 rounded-xl transition-all group-hover:bg-primary/10"></div>
+<img alt="Anup Routray, Director of KSPL" class="relative w-full aspect-[3/4] object-cover shadow-2xl grayscale hover:grayscale-0 transition-all duration-500 border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0GT4-0S4xq-CH2rckjmqH_6B0bvWNUAkbvPbbnCz7mkRI9UFPqy_lCoRFkCunxkuFdvorKwBsDXEhxi9Zs7-6K58W_lEp-5gPR-hCe_JbFjqKORq-Gkac6cGkN3tG3t5qySPfn3RuiFYVsOSVKJXpvhDEqk4Pfg-0WUIr4HJv1Lsk19g_ZOF9y5TRAg61JovYEtYgWPTke53dD8_nM7xuywz7M2_CJm7zyqgjt8oxvM61xdSVAta-h4SlosZF5HP9VfcnOvbejJw"/>
+<div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-6 border-l-4 border-secondary shadow-lg">
+<h4 class="font-headline-md text-primary text-xl">Anup Routray</h4>
+<p class="font-label-lg text-secondary uppercase tracking-widest mt-1">Director, KSPL</p>
+</div>
+</div>
+</div>
+<!-- Message Content -->
+<div class="w-full lg:w-2/3">
+<h3 class="font-headline-md text-headline-md text-primary mb-6">Drive for Innovation &amp; Excellence</h3>
+<div class="space-y-6 text-on-surface-variant font-body-md leading-relaxed">
+<p class="font-medium text-on-surface italic">"Welcome to KSPL."</p>
+<p class="">
+                                    At KSPL, we believe that growth is built on trust, commitment, and continuous innovation. Since our inception, our journey has been driven by a clear vision — to deliver reliable solutions, create long-term value for our customers and partners, and contribute meaningfully to the industries and communities we serve.
+                                </p>
+<p class="">
+                                    In today’s fast-changing business environment, adaptability and customer focus are more important than ever. At KSPL, we continuously strengthen our capabilities, expand our portfolio, and embrace new technologies to meet evolving market demands. Our success is a reflection of the confidence our customers, channel partners, employees, and stakeholders have placed in us.
+                                </p>
+<p class="">
+                                    We are proud of the strong relationships we have built over the years. Our team remains committed to maintaining the highest standards of quality, integrity, and service excellence in every aspect of our business operations. We believe sustainable growth can only be achieved through transparency, innovation, and a customer-first approach.
+                                </p>
+<div class="pt-6 border-t border-outline-variant mt-8">
+<div class="mt-4">
+<p class="font-headline-md text-primary">Anup Routray</p>
+<p class="font-label-lg text-on-surface-variant uppercase tracking-wider">Director KSPL</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Message 3: Nihar Panigrahi -->
+<div class="flex flex-col lg:flex-row gap-16 items-start">
+<!-- Director Image -->
+<div class="w-full lg:w-1/3 flex-shrink-0">
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/5 rounded-xl transition-all group-hover:bg-primary/10"></div>
+<img alt="Nihar Panigrahi, Director of KSPL" class="relative w-full aspect-[3/4] object-cover shadow-2xl grayscale hover:grayscale-0 transition-all duration-500 border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDmA_DkSy3a-pUglJ2512VYyHKtd-uV2V_bD8Kos1T3GyRLVhz_pIsp1ZFfvYbm0A7SYyC_hhfmgHxIWH3Mo03SrUaUUZlJh6cb-trGqiNCmAZqiS2klLJ4lkBFFHivjvsejonOh_3955aJMEdP3TOjAFciHqtbI5AMyuIxIKTTHYPu6xsCYjOLtd9-2Gv3gttr0U0nXThlMpfJnapkNIpFDQpnE8MG1AqbtcRfurGWVdPZP-J-iq9OsrRSbzG7nIZVIFbKMHF3gE"/>
+<div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-6 border-l-4 border-primary shadow-lg">
+<h4 class="font-headline-md text-primary text-xl">Nihar Panigrahi</h4>
+<p class="font-label-lg text-secondary uppercase tracking-widest mt-1">Director, KSPL</p>
+</div>
+</div>
+</div>
+<!-- Message Content -->
+<div class="w-full lg:w-2/3">
+<h3 class="font-headline-md text-headline-md text-primary mb-6">Envisioning the Future</h3>
+<div class="space-y-6 text-on-surface-variant font-body-md leading-relaxed">
+<div class="bg-primary text-white p-8 border-l-4 border-secondary">
+<p class="font-headline-md text-white text-lg mb-4">As we move forward, KSPL will continue to focus on:</p>
+<ul class="space-y-3">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-secondary-fixed text-xl shrink-0">rocket_launch</span>
+<span class="">Delivering dependable and value-driven solutions</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-secondary-fixed text-xl shrink-0">handshake</span>
+<span class="">Strengthening partnerships and customer satisfaction</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-secondary-fixed text-xl shrink-0">lightbulb</span>
+<span class="">Expanding business opportunities with innovation and efficiency</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-secondary-fixed text-xl shrink-0">corporate_fare</span>
+<span class="">Building a responsible and future-ready organization</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-secondary-fixed text-xl shrink-0">groups_3</span>
+<span class="">Empowering our people and encouraging continuous improvement</span>
+</li>
+</ul>
+</div>
+<p class="">
+                                    We sincerely thank our customers, business associates, employees, and well-wishers for their continued support and trust in KSPL. Your confidence inspires us to achieve greater milestones every year. We look forward to growing together and creating a stronger future.
+                                </p>
+<div class="pt-6 border-t border-outline-variant mt-8">
+<p class="font-body-lg text-on-surface italic">Warm Regards,</p>
+<div class="mt-4">
+<p class="font-headline-md text-primary">Nihar Panigrahi</p>
+<p class="font-label-lg text-on-surface-variant uppercase tracking-wider">Director KSPL</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant">
+<div class="max-w-7xl mx-auto px-8 py-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+<div class="flex flex-col gap-4">
+<a href="index.html">
+<div class="flex flex-col leading-tight">
+  <span class="text-lg md:text-xl font-bold tracking-wide text-primary">KEIRESTU SMART PRO</span>
+  <span class="text-[10px] md:text-xs uppercase tracking-[0.25em] text-[#1E88C8] font-semibold">Private Limited</span>
+</div>
+</a>
+<p class="font-body-sm text-on-surface-variant max-w-xs">
+          A leading value-added distributor specializing in IT and Surveillance solutions, bridging the gap between technology and enterprise.
+        </p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-lg text-primary uppercase tracking-widest">Corporate Address</h4>
+<p class="font-body-sm text-on-surface-variant">KEIRESTU SMART PRO PVT LTD.,<br/>139, Ground Floor, near Bishnu Mandir,<br/>Saheed Nagar, Bhubaneswar,<br/>Odisha 751007</p>
+</div>
+<div class="flex flex-col gap-4 md:items-end">
+<h4 class="font-label-lg text-primary uppercase tracking-widest">Contact Info</h4>
+<p class="font-body-sm text-on-surface-variant md:text-right">Email: keirestusmartpropvtltd@gmail.com<br/>Phone: 9437039625</p>
+</div>
+</div>
+<div class="border-t border-outline-variant pt-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-2">
+<p class="font-body-sm text-xs uppercase tracking-widest text-on-surface-variant font-semibold">Copyright 2022 -ITINFOWAYS.COM All Rights Reserved</p>
+</div>
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+<a class="text-xs uppercase tracking-widest font-bold text-on-surface-variant hover:text-primary transition-colors underline underline-offset-4" href="#">Privacy Policy</a>
+<a class="text-xs uppercase tracking-widest font-bold text-on-surface-variant hover:text-primary transition-colors underline underline-offset-4" href="#">Terms of Service</a>
+<a class="text-xs uppercase tracking-widest font-bold text-on-surface-variant hover:text-primary transition-colors underline underline-offset-4" href="#">CSR Policy</a>
+<a class="text-xs uppercase tracking-widest font-bold text-on-surface-variant hover:text-primary transition-colors underline underline-offset-4" href="contact.html">Career</a>
+<a class="text-xs uppercase tracking-widest font-bold text-on-surface-variant hover:text-primary transition-colors underline underline-offset-4" href="contact.html">Global Support</a>
+</div>
+</div>
+</div>
+</footer>
+<script id="kspl-nav-script">
+document.addEventListener('click', function(e){
+  const btn = e.target.closest('.kspl-menu-toggle');
+  if(!btn) return;
+  const bar = btn.closest('nav, header');
+  const menu = bar ? bar.querySelector('.kspl-mobile-menu') : document.querySelector('.kspl-mobile-menu');
+  if(menu) menu.classList.toggle('hidden');
+});
+</script></body></html>
